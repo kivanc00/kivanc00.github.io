@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Your Name</title>
+  <link>https://your-username.github.io/your-repo</link>
+  <description>Personal site and blog.</description>
+  <item>
+    <title>Why I&apos;m Building This Site</title>
+    <link>https://your-username.github.io/your-repo/post.html?slug=first-post</link>
+    <guid>https://your-username.github.io/your-repo/post.html?slug=first-post</guid>
+    <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+    <description>A short note on why this blog exists and how the publishing workflow works.</description>
+  </item>
+  <item>
+    <title>A Note on Simplicity</title>
+    <link>https://your-username.github.io/your-repo/post.html?slug=second-post</link>
+    <guid>https://your-username.github.io/your-repo/post.html?slug=second-post</guid>
+    <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+    <description>Thinking through why fewer moving parts usually wins for a personal site.</description>
+  </item>
+</channel>
+</rss>

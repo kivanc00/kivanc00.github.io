@@ -1,0 +1,39 @@
+name: Regenerate blog index
+
+# Runs the zero-dependency Node script whenever a Markdown post changes, and
+# commits the regenerated posts/index.json, rss.xml, and sitemap.xml back to
+# the branch. This is CI convenience, not a build step for the site itself —
+# GitHub Pages still just serves static files; nothing here needs to run for
+# the site to work, it only saves you from running the script by hand.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "posts/**.md"
+      - "scripts/generate-index.mjs"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate manifest, RSS, sitemap
+        run: node scripts/generate-index.mjs
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add posts/index.json rss.xml sitemap.xml
+          git diff --staged --quiet || git commit -m "chore: regenerate blog index [skip ci]"
+          git push

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog · Your Name</title>
+<meta name="description" content="All articles, in one place. Searchable.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog · Your Name">
+<meta property="og:description" content="All articles, in one place. Searchable.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="canonical" href="blog.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+<div id="reading-progress"></div>
+
+<nav class="site-nav">
+  <div class="inner">
+    <a href="index.html" class="brand">Your Name<span class="dot">.</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" style="padding-top:56px; padding-bottom:100px;">
+  <p class="eyebrow">Archive</p>
+  <h1 style="font-family:var(--font-display); font-size:clamp(2rem,4vw,2.6rem); margin:0 0 28px; letter-spacing:-0.02em;">Blog</h1>
+
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="search" id="search-input" placeholder="Search articles by title, tag, or content…" autocomplete="off">
+  </div>
+  <p class="search-count" id="search-count">Loading…</p>
+
+  <div class="post-list" id="post-list" style="margin-top:24px;">
+    <div class="skeleton skeleton-line" style="width:50%"></div>
+    <div class="skeleton skeleton-line" style="width:70%"></div>
+    <div class="skeleton skeleton-line" style="width:45%"></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <p>© <span id="year"></span> Your Name</p>
+    <div class="links">
+      <a href="rss.xml">RSS</a>
+      <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/nav.js"></script>
+<script type="module" src="assets/js/blog.js"></script>
+</body>
+</html>

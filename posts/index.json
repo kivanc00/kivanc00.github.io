@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "first-post",
+    "file": "first-post.md",
+    "title": "Why I'm Building This Site",
+    "date": "2026-07-11",
+    "description": "A short note on why this blog exists and how the publishing workflow works.",
+    "tags": [
+      "meta",
+      "writing"
+    ],
+    "readingTime": 1
+  },
+  {
+    "slug": "second-post",
+    "file": "second-post.md",
+    "title": "A Note on Simplicity",
+    "date": "2026-07-05",
+    "description": "Thinking through why fewer moving parts usually wins for a personal site.",
+    "tags": [
+      "meta",
+      "design"
+    ],
+    "readingTime": 1
+  }
+]
