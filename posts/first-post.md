@@ -1,5 +1,5 @@
 ---
-title: Why I'm Building This Site
+title: Değiş 
 date: 2026-07-11
 description: A short note on why this blog exists and how the publishing workflow works.
 tags:
