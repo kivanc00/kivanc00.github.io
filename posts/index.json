@@ -2,12 +2,12 @@
   {
     "slug": "first-post",
     "file": "first-post.md",
-    "title": "Değiş",
+    "title": "Ortaya Çıkamayış",
     "date": "2026-07-11",
-    "description": "A short note on why this blog exists and how the publishing workflow works.",
+    "description": "First there was something, i guess.",
     "tags": [
     ],
-    "readingTime": 1
+    "readingTime": 2
   },
   {
     "slug": "second-post",
