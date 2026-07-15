@@ -1,7 +1,7 @@
 ---
 title: Ortaya Çıkamayış 
 date: 2026-07-11
-description: First there was something, i guess.
+description: First(or maybe always) there was something, i guess.
 tags:
 ---
 ### Sıkıntı
