@@ -1,30 +1,35 @@
 ---
-title: A Note on Simplicity
+title: İhtiyacımız Olan Değil ama Hak Ettiğimiz Safsata
 date: 2026-07-05
-description: Thinking through why fewer moving parts usually wins for a personal site.
+description: Titiz olmanızdan hoşlanmıyorum matematik yapan insanlar.
 tags:
-  - meta
-  - design
+
 ---
 
-Every extra dependency is something that can break, go unmaintained, or need an upgrade you didn't
-ask for. For a personal site meant to last years, that adds up.
+Varsayım 1: Zaman vardır ($t \\to \\pm\\infty$)
+Not: Varlık vardırı varsayım kabul etmiyorum, varlık üzerine bahsettiğimiz şeydir. Başka türlü bir varlık tanımı rekürsif olmadığı için, konuşma başmada yeterli değildir, bu yüzden üzerinden çıkılamaz silsile yaratır. Zaman ise büyük ihtimalle yok.
+Varsayım 2: Zaman süreklidir. (Hesap ona göre yapılacak, ayrık yapıda da seneryo aynıdır sanıyorum)
+Not: En iyi çalışan zaman(fizik) teorileri, hatta tek çalışan zaman teori türü sürekli olduğu seneryoda(QFT bile uzay zamanı sürekli alıyor). O yüzden pek gocunmuyorum varsayımımdan.
+İki farklı hesap seçeneğimiz var.
 
-## The rule I keep coming back to
+## 1. Lineer Zaman Modeli (Tek Seferlik Varoluş)
 
-If a static file can do the job, use a static file. This site has exactly three moving parts:
+Varoluşu zaman ekseninde basit bir basamak fonksiyonu olarak tanımlarsak:
 
-1. Markdown files you write
-2. A small manifest listing them (`posts/index.json`)
-3. Plain JavaScript that reads both and renders the page
+$$ 
+E(t) = \\begin{cases} 
+1, & t \\in [t_{doğum}, t_{ölüm}] \\\\ 
+0, & t \\notin [t_{doğum}, t_{ölüm}] 
+\\end{cases} 
+$$
 
-No framework, no bundler, no server.
+Rastgele seçilen bir $t$ anında sistemin var olma olasılığı ($P$), toplam yaşam süresinin ($\\Delta t$) evrenin toplam süresine oranının limitidir:
 
-## The one manual step
+$$ 
+P = \\lim_{T \\to \\infty} \\frac{1}{2T} \\int_{-T}^{T} E(t) \\, dt = \\lim_{T \\to \\infty} \\frac{\\Delta t}{2T} = 0 
+$$
 
-There's a trade-off worth being upfront about: something has to tell the browser which Markdown
-files exist, since static hosting can't list a folder's contents on its own. This project handles
-it with a small `posts/index.json` manifest that a script regenerates automatically — see the
-README for the two ways to run it.
 
-That's the only indirection in the whole system, and it's one line per post.
+## 2. Ergodik Hipotez ve Kaotik Sistem Modeli (Poincaré Yinelemesi)
+
+Poincaré Yineleme Teoremi varsayımlara hakim olmadığımdan ve sıkıldığımdan bırakıyorum bilen bilir bilmeyen bilmezgenel öyledir.
