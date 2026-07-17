@@ -11,13 +11,10 @@
   {
     "slug": "second-post",
     "file": "second-post.md",
-    "title": "A Note on Simplicity",
+    "title": "İhtiyacımız Olan Değil ama Hak Ettiğimiz Safsata",
     "date": "2026-07-05",
-    "description": "Thinking through why fewer moving parts usually wins for a personal site.",
-    "tags": [
-      "meta",
-      "design"
-    ],
+    "description": "Titiz olmanızdan hoşlanmıyorum matematik yapan insanlar.",
+    "tags": [],
     "readingTime": 1
   }
 ]
